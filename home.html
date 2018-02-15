@@ -13,10 +13,10 @@
         <div id="canvas-container">
             <canvas id="myCanvas" width="480" height="320"></canvas>
         </div>
-        <!--<div class="button-container">
-            <button type="" id="left" class="navigation-button">Left</button>
-            <button type="" id="right" class="navigation-button">Right</button>
-        </div>-->
+        <div class="button-container">
+            <button type="" id="left" class="navigation-button" onmousedown="moveright()" onmouseup="stopMove()" ontouchstart="moveright()">Left</button>
+            <button type="" id="right" class="navigation-button" onmousedown="moveleft()" onmouseup="stopMove()" ontouchstart="moveleft()">Right</button>
+        </div>
          <script src="js/script.js"></script>
     </body>
 </html>
