@@ -28,9 +28,23 @@ for(c=0; c<brickColumnCount; c++) {
     }
 }
 
-document.getElementById("left");
+document.getElementById("left").addEventListener("onmousedown",keydownleft);
+document.getElementById("left").addEventListener("onmouseup",keyupleft);
 document.getElementById("right");
 
+function moveleft() {
+    if(paddleX < canvas.width-paddleWidth) {
+        paddleX += 70;
+    }
+}
+function moveright() {
+    if(paddleX > 0) {
+        paddleX -= 70;
+    }
+}
+function stopMove(params) {
+    paddleX += 0;
+}
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
@@ -108,7 +122,7 @@ function drawScore() {
 
  drawBricks();
  drawBall();
-  drawPaddle();
+ drawPaddle();
 function draw() {
     document.getElementById("canvas-container").style.display="block"
     ctx.clearRect(0, 0, canvas.width, canvas.height);
